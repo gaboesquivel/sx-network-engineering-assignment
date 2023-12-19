@@ -1,0 +1,8 @@
+packages:
+  - 'apps/**'
+  - 'packages/**'
+  - 'hardhat/**'
+  - "!**/.next/**" 
+  - "!**/dist/**" 
+  - "!**/artifacts/**" 
+  - "!**/cache/**" 

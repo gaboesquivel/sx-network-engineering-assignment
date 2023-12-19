@@ -1,18 +1,5 @@
-node_modules
-build/
-node_modules
+
 .env
-*.js
-dist
-
-# Hardhat files
-/cache
-/artifacts
-
-# TypeChain files
-/typechain
-/typechain-types
-
-# solidity-coverage files
-/coverage
-/coverage.json
+node_modules
+.turbo
+.DS_Store

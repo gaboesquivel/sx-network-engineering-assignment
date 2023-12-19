@@ -1,31 +1,26 @@
 {
-  "name": "web3-engineering-assignment",
+  "name": "voting-app-monorepo",
   "version": "1.0.0",
-  "description": "An assignment for prospective web3 engineers @ SX.bet",
-  "main": "\"\"",
-  "dependencies": {
-    "@typechain/ethers-v6": "^0.5.1",
-    "chai": "^4.2.0",
-    "chai-as-promised": "^7.1.1",
-    "ethers": "^6.8.1"
-  },
-  "scripts": {
-    "test": "hardhat test",
-    "compile": "tsc",
-    "typechain": "hardhat typechain",
-    "deploy": "hardhat run scripts/deploy.ts --network localhost"
-  },
-  "author": "Dan Kostiuk <daniel@nextgenbt.com>",
+  "description": "Monorepo for Blind Voting app",
+  "author": "Gabo Esquivel <contact@gaboesquivel.com>",
   "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "turbo build --no-daemon",
+    "dev": "turbo dev --no-daemon --parallel",
+    "lint": "turbo lint --no-daemon",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
   "devDependencies": {
-    "@nomicfoundation/hardhat-chai-matchers": "^2.0.2",
-    "@nomicfoundation/hardhat-network-helpers": "^1.0.9",
-    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
-    "@typechain/hardhat": "^9.1.0",
-    "@types/chai": "^4.3.11",
-    "@types/mocha": "^10.0.6",
-    "@types/node": "^20.10.0",
-    "hardhat": "^2.19.1",
-    "typechain": "^8.3.2"
-  }
+    "@types/node": "^20.4.1",
+    "eslint": "^8.44.0",
+    "prettier": "^3.0.0",
+    "turbo": "^1.11.2"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "hardhat/*"
+  ],
+  "packageManager": "pnpm@8.6.6"
 }
