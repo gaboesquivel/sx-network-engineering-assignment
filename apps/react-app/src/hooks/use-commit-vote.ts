@@ -4,7 +4,8 @@ import { stringToHex, } from 'viem'
 
 export function useCommitVote({option, secret}:{option: 1 | 2, secret: string }){
   const commit = stringToHex(`${option}~${secret}`, {size: 32})
-  console.log(commit)
+  console.log({option, secret, commit})
+
   const { config } = usePrepareContractWrite({
     ...commitReveal,
     functionName: 'commitVote',
