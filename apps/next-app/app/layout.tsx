@@ -3,7 +3,7 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 
 import '@/app/globals.css'
-import '@rainbow-me/rainbowkit/styles.css'
+// import '@rainbow-me/rainbowkit/styles.css'
 import { cn } from '@/lib/utils'
 import { Providers } from '@/components/providers'
 import { Header } from '@/components/header'
@@ -38,10 +38,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
 export const metadata = {
   metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
   title: {
-    default: 'Masterbots',
-    template: `%s - Masterbots`
+    default: 'Blind App',
+    template: `%s - Blind App`
   },
-  description: 'Specialized AI chatbots',
+  description: '',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',

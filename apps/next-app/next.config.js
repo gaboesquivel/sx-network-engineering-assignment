@@ -4,14 +4,14 @@ const path = require('path')
 
 module.exports = {
   reactStrictMode: true,
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback.fs = false
-      config.resolve.fallback.tls = false
-      config.resolve.fallback.net = false
-    }
-    return config
-  },
+  // webpack: (config, { isServer }) => {
+  //   if (!isServer) {
+  //     config.resolve.fallback.fs = false
+  //     config.resolve.fallback.tls = false
+  //     config.resolve.fallback.net = false
+  //   }
+  //   return config
+  // },
   images: {
     remotePatterns: []
   },
