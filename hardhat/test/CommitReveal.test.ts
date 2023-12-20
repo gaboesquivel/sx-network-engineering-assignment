@@ -15,8 +15,8 @@ describe("CommitReveal", async () => {
   it("should record a proper commit", async () => {
     const vote = "1~mybigsecret";
     const commit = ethers.encodeBytes32String(vote)
-
     await commitReveal.commitVote(commit);
+    console.log(commit)
     const commitsArray = await commitReveal.getVoteCommitsArray();
     const voteStatus = await commitReveal.voteStatuses(commit);
     const numberOfVotes = await commitReveal.numberOfVotesCast();

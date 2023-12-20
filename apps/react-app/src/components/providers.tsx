@@ -8,7 +8,7 @@ import { localhost } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 
 const { chains, publicClient } = configureChains(
-  [localhost], [publicProvider()]
+  [{...localhost, id: 31337}], [publicProvider()]
 );
 
 const { connectors } = getDefaultWallets({
