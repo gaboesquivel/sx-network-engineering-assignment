@@ -13,9 +13,9 @@ const config: HardhatUserConfig = {
   },
   networks:{
     testnet: {
-      url: 'https://rpc.goerli.arbitrum.gateway.fm',
-      chainId: 421613,
-      accounts: [process.env.ARBITRUM_GOERLI_TESTNET_PRIVATE_KEY??'']
+      url: 'https://rpc.sepolia.org',
+      chainId: 11155111,
+      accounts: [process.env.TESTNET_PRIVATE_KEY??'']
     },
   }
 };

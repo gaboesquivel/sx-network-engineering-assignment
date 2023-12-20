@@ -141,6 +141,9 @@ importers:
       clsx:
         specifier: ^2.0.0
         version: 2.0.0
+      ethers:
+        specifier: ^6.8.1
+        version: 6.8.1
       lucide-react:
         specifier: ^0.298.0
         version: 0.298.0(react@18.2.0)

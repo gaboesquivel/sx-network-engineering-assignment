@@ -2,7 +2,7 @@ import { ethers } from "hardhat";
 
 async function main() {
   const ComomitReveal = await ethers.getContractFactory("CommitReveal")
-  const commitReveal = await ComomitReveal.deploy(120, "YES", "NO");
+  const commitReveal = await ComomitReveal.deploy(12000, "YES", "NO");
 
   console.log(
     `Deployed CommitReveal at ${commitReveal.target}`
