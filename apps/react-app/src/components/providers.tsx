@@ -1,20 +1,18 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import {
   getDefaultWallets,
   RainbowKitProvider,
 } from '@rainbow-me/rainbowkit';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
-import {
-  optimismGoerli
-} from 'wagmi/chains';
+import { localhost } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 
 const { chains, publicClient } = configureChains(
-  [optimismGoerli], [publicProvider()]
+  [localhost], [publicProvider()]
 );
 
 const { connectors } = getDefaultWallets({
-  appName: 'My RainbowKit App',
+  appName: 'Blind Voting App',
   projectId: 'YOUR_PROJECT_ID',
   chains
 });
