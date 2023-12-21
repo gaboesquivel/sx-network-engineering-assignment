@@ -3,7 +3,7 @@ import {
   getDefaultWallets,
   RainbowKitProvider,
 } from '@rainbow-me/rainbowkit';
-import { configureChains, createConfig, WagmiConfig } from 'wagmi';
+import {  configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { localhost } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 

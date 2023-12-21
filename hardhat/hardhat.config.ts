@@ -11,13 +11,6 @@ const config: HardhatUserConfig = {
     outDir: "typechain",
     target: "ethers-v6",
   },
-  networks:{
-    testnet: {
-      url: 'https://rpc.sepolia.org',
-      chainId: 11155111,
-      accounts: [process.env.TESTNET_PRIVATE_KEY??'']
-    },
-  }
 };
 
 export default config;

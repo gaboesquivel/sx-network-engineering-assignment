@@ -1,5 +1,5 @@
 import { commitReveal } from '@/contracts/commit-reveal';
-import { ethers, type Eip1193Provider, type InterfaceAbi } from 'ethers';
+import { ethers, type Eip1193Provider } from 'ethers';
 
 declare global {
   interface Window{
@@ -16,11 +16,12 @@ export async function commitVoteWithEthers({option, secret}:{option: 1 | 2, secr
   const signer = await provider.getSigner();
 
   // Create a new Contract instance
-  const contract = new ethers.Contract(commitReveal.address, commitReveal.abi as InterfaceAbi, signer);
+  const contract = new ethers.Contract(commitReveal.address, commitReveal.abi, signer);
 
   // Construct the commit string and convert to bytes32
   const commit = ethers.encodeBytes32String(`${option}~${secret}`);
-console.log(commit)
+  console.log({commit})
+  
   // Call commitVote function on the Contract
   const transactionResponse = await contract.commitVote(commit);
   console.log(transactionResponse);
