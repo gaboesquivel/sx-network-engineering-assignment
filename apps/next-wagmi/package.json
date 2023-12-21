@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "blind-ui-next-wagmi",
+  "name": "next-wagmi",
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
